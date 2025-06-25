@@ -1,8 +1,10 @@
 "use client";
 
+import { CalendarIcon } from "lucide-react";
 import { useState } from "react";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -46,6 +48,9 @@ const DoctorCard = ({ doctor }: DoctorCardProps) => {
       <CardContent className="flex flex-col gap-2"></CardContent>
       <Separator />
       <CardFooter className="flex flex-col gap-2">
+        <Badge variant="outline">
+          <CalendarIcon className="mr-1" /> Segunda a Sexta
+        </Badge>
         <Dialog
           open={isUpsertDoctorDialogOpen}
           onOpenChange={setIsUpsertDoctorDialogOpen}
