@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarIcon } from "lucide-react";
+import { CalendarIcon, DollarSignIcon } from "lucide-react";
 import { useState } from "react";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -50,6 +50,10 @@ const DoctorCard = ({ doctor }: DoctorCardProps) => {
       <CardFooter className="flex flex-col gap-2">
         <Badge variant="outline">
           <CalendarIcon className="mr-1" /> Segunda a Sexta
+        </Badge>
+        <Badge variant="outline">
+          <DollarSignIcon className="mr-1" />{" "}
+          {doctor.appointmentPriceInCents / 100}
         </Badge>
         <Dialog
           open={isUpsertDoctorDialogOpen}
