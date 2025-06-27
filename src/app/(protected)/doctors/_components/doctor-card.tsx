@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarIcon, DollarSignIcon } from "lucide-react";
+import { CalendarIcon, ClockIcon, DollarSignIcon } from "lucide-react";
 import { useState } from "react";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -52,7 +52,11 @@ const DoctorCard = ({ doctor }: DoctorCardProps) => {
           <CalendarIcon className="mr-1" /> Segunda a Sexta
         </Badge>
         <Badge variant="outline">
-          <DollarSignIcon className="mr-1" />{" "}
+          <ClockIcon className="mr-1" />
+          {`${doctor.availableFromTime} - ${doctor.availableToTime}`}
+        </Badge>
+        <Badge variant="outline">
+          <DollarSignIcon className="mr-1" />
           {doctor.appointmentPriceInCents / 100}
         </Badge>
         <Dialog
