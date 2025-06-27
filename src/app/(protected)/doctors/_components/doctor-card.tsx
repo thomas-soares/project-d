@@ -45,9 +45,7 @@ const DoctorCard = ({ doctor }: DoctorCardProps) => {
         </div>
       </CardHeader>
       <Separator />
-      <CardContent className="flex flex-col gap-2"></CardContent>
-      <Separator />
-      <CardFooter className="flex flex-col gap-2">
+      <CardContent className="flex flex-col gap-2">
         <Badge variant="outline">
           <CalendarIcon className="mr-1" /> Segunda a Sexta
         </Badge>
@@ -59,6 +57,9 @@ const DoctorCard = ({ doctor }: DoctorCardProps) => {
           <DollarSignIcon className="mr-1" />
           {doctor.appointmentPriceInCents / 100}
         </Badge>
+      </CardContent>
+      <Separator />
+      <CardFooter className="flex flex-col gap-2">
         <Dialog
           open={isUpsertDoctorDialogOpen}
           onOpenChange={setIsUpsertDoctorDialogOpen}
