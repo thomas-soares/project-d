@@ -69,7 +69,7 @@ export function UpsertPatientForm({
   });
 
   const onSubmit = form.handleSubmit((data: PatientFormData) => {
-    execute(data);
+    execute(data as any);
   });
 
   return (
